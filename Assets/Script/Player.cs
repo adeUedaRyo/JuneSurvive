@@ -19,6 +19,6 @@ public class Player : MonoBehaviour
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
         Vector2 hv = new Vector2(h, v).normalized;
-        rb.velocity = hv* mSpeed;
+        rb.velocity = hv * mSpeed;
     }
 }
