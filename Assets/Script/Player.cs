@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     float h = 0;
     float v = 0;
     Rigidbody2D rb;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,5 +21,7 @@ public class Player : MonoBehaviour
         v = Input.GetAxisRaw("Vertical");
         Vector2 hv = new Vector2(h, v).normalized;
         rb.velocity = hv * mSpeed;
+
+
     }
 }
