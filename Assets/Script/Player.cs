@@ -21,7 +21,13 @@ public class Player : MonoBehaviour
         v = Input.GetAxisRaw("Vertical");
         Vector2 hv = new Vector2(h, v).normalized;
         rb.velocity = hv * mSpeed;
-
-
+        if(h > 0)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+        else if (h < 0)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
     }
 }

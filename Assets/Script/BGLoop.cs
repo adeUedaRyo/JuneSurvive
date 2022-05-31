@@ -5,7 +5,7 @@ using UnityEngine;
 public class BGLoop : MonoBehaviour
 {
 
-    [SerializeField] Transform upper, lower, right, left;
+    [SerializeField] Transform upper, lower, right, left,maxX,minX,maxY,minY;
     GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -16,21 +16,22 @@ public class BGLoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.y >= 12.5)
-        {
-            player.transform.position = new Vector2(player.transform.position.x, lower.position.y);
-        }
-        if (player.transform.position.y <= -48.5)
-        {
-            player.transform.position = new Vector2(player.transform.position.x, upper.position.y);
-        }
-        if (player.transform.position.x <= -12.5)
-        {
-            player.transform.position = new Vector2(right.position.x, player.transform.position.y);
-        }
-        if (player.transform.position.x >= 59)
+        if (player.transform.position.x >= maxX.transform.position.x)
         {
             player.transform.position = new Vector2(left.position.x, player.transform.position.y);
         }
+        if (player.transform.position.x <= minX.transform.position.x)
+        {
+            player.transform.position = new Vector2(right.position.x, player.transform.position.y);
+        }
+        if (player.transform.position.y >= maxY.transform.position.y)
+        {
+            player.transform.position = new Vector2(player.transform.position.x, lower.position.y);
+        }
+        if (player.transform.position.y <= minY.transform.position.y)
+        {
+            player.transform.position = new Vector2(player.transform.position.x, upper.position.y);
+        }
+        
     }
 }
