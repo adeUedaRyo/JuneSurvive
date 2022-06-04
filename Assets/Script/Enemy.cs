@@ -18,12 +18,23 @@ public class Enemy : MonoBehaviour
     {
         Vector3 vec = pleyer.transform.position - transform.position;
         vec.Normalize();
-
+        if(vec.x < 0)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
         transform.position += vec * _speed * Time.deltaTime;
         
         if(hp <= 0)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
+    }
+    public void Damage(int damage)
+    {
+        hp -= damage;
     }
 }
