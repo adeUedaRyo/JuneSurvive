@@ -5,18 +5,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float _speed = 10;
-    GameObject pleyer;
+    GameObject player;
     [SerializeField] int hp = 5;
+    [SerializeField] float atk;
     // Start is called before the first frame update
     void Awake()
     {
-        pleyer = GameObject.Find("Player");
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 vec = pleyer.transform.position - transform.position;
+        Vector3 vec = player.transform.position - transform.position;
         vec.Normalize();
         if(vec.x < 0)
         {
@@ -31,6 +32,14 @@ public class Enemy : MonoBehaviour
         if(hp <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            float attack = atk * Time.deltaTime;
+            player.GetComponent<Player>().Damage(attack);
         }
     }
     public void Damage(int damage)
