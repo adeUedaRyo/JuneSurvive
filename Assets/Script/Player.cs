@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField]float hp = 100;//現在HP
     float maxHp = 0;//最大HP
     Rigidbody2D rb;
-    [SerializeField]public Slider slider;
+    [SerializeField]Slider slider;
+    [SerializeField] Transform hpUI;
 
     void Start()
     {
@@ -30,10 +31,12 @@ public class Player : MonoBehaviour
         if(h > 0)
         {
             transform.localScale = new Vector2(1, 1);
+            hpUI.localScale = new Vector2(1, 1);
         }
         else if (h < 0)
         {
             transform.localScale = new Vector2(-1, 1);
+            hpUI.localScale = new Vector2(-1, 1);
         }
 
         slider.value = hp / maxHp;//スライダーの値を現在HPの割合に変更
