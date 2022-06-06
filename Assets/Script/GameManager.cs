@@ -8,23 +8,32 @@ public class GameManager : MonoBehaviour
 {
     int killCount = 0;
     TextMeshProUGUI killText;
+    TextMeshProUGUI timerText;
     [SerializeField] string kCText = "KILL";
+    float timer = 0;
+    public bool alive = true;
     // Start is called before the first frame update
     void Start()
     {
         killText = GameObject.Find("Kill Count Text").GetComponent<TextMeshProUGUI>();
         killText.text = kCText + " : " + killCount.ToString("D4");
+        timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
+        timerText.text = (timer / 60).ToString("00")+":" +(timer% 60).ToString("00") ;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(alive)
+        {
+            timer = Time.time;
+            timerText.text = Mathf.Floor(timer / 60).ToString("00") +":"+ Mathf.Floor(timer % 60).ToString("00");
+        }
     }
     public void Kill()//“GŒ‚”j
     {
         killCount++;
-        killText.text = kCText + " : " + killCount.ToString("D4");//Œ»İ‚ÌŒ‚”j”‚ğ•\¦
+        killText.text = kCText + ":" + killCount.ToString("D4");//Œ»İ‚ÌŒ‚”j”‚ğ•\¦
     }
     public void Gameover()//ƒvƒŒƒCƒ„[‚Ì€–S
     {

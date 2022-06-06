@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
         hP -= damage;
         if(hP <=0)//HPがゼロになる時
         {
+            gm.alive = false;
             anim.SetTrigger("Death");//死亡時用アニメーションを再生
         }
     }
