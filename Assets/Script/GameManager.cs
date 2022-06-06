@@ -15,4 +15,8 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    public void Gameover()
+    {
+        Debug.Log(" GAME OVER ");
+    }
 }
