@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    GameManager gm;
     [SerializeField] float _speed = 10;
     GameObject player;
     [SerializeField] int hp = 5;
@@ -11,6 +12,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.Find("Player");
     }
 
@@ -30,11 +32,14 @@ public class Enemy : MonoBehaviour
                 transform.localScale = new Vector2(-1, 1);
             }
             transform.position += vec * _speed * Time.deltaTime;
+
+            if (hp <= 0)
+            {
+                gm.Kill();
+                Destroy(gameObject);
+            }
         }
-        if(hp <= 0)
-        {
-            Destroy(gameObject);
-        }
+        
         
     }
     private void OnCollisionStay2D(Collision2D collision)
