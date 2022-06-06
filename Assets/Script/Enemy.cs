@@ -7,8 +7,8 @@ public class Enemy : MonoBehaviour
     GameManager gm;
     [SerializeField] float _speed = 10;
     GameObject player;
-    [SerializeField] int hp = 5;
-    [SerializeField] float atk;
+    [SerializeField] int hP = 5;
+    [SerializeField] float dps = 10;//ïbä‘É_ÉÅÅ[ÉW
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
             }
             transform.position += vec * _speed * Time.deltaTime;
 
-            if (hp <= 0)
+            if (hP <= 0)
             {
                 gm.Kill();
                 Destroy(gameObject);
@@ -46,12 +46,12 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            float attack = atk * Time.deltaTime;
+            float attack = dps * Time.deltaTime;
             player.GetComponent<Player>().Damage(attack);
         }
     }
     public void Damage(int damage)
     {
-        hp -= damage;
+        hP -= damage;
     }
 }

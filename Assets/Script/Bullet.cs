@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float _speed = 10;
+    [SerializeField] float _speed = 10;//’e‘¬
     GameObject pleyer;
-    [SerializeField] int power = 5;
+    [SerializeField] int power = 5;//ƒ_ƒ[ƒW
     Vector3 vec;
-    [SerializeField]int penetration = 1;
+    [SerializeField]int penetration = 1;//ŠÑ’Ê‚·‚é‰ñ”
     int penetCount = 0;
     // Start is called before the first frame updat
     void Start()

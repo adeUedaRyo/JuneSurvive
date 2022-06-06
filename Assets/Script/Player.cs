@@ -34,7 +34,8 @@ public class Player : MonoBehaviour
         v = Input.GetAxisRaw("Vertical");
         Vector2 hv = new Vector2(h, v).normalized;
         rb.velocity = hv * moveSpeed;
-        if(h > 0)
+
+        if(h > 0)//左を向いている時だけ左右反転
         {
             transform.localScale = new Vector2(1, 1);
             hPUI.localScale = new Vector2(1, 1);
@@ -42,24 +43,20 @@ public class Player : MonoBehaviour
         else if (h < 0)
         {
             transform.localScale = new Vector2(-1, 1);
-            hPUI.localScale = new Vector2(-1, 1);
+            hPUI.localScale = new Vector2(-1, 1);//HPバーが反転するのを防ぐ
         }
 
         slider.value = hP / maxHp;//スライダーの値を現在HPの割合に変更
     }
-    public void Damage(float damage)
+    public void Damage(float damage)//ダメージを受けたとき
     {
         hP -= damage;
-        if(hP <=0)
+        if(hP <=0)//HPがゼロになる時
         {
-            Death();
+            anim.SetTrigger("Death");//死亡時用アニメーションを再生
         }
     }
-    public void Explosion() 
-    {
-        anim.SetTrigger("Death");
-    }
-    public void Death()
+    public void Death()//死亡時用アニメーションから呼ばれる
     {
         Instantiate(explosion,this.transform.position,this.transform.rotation);
         gm.Gameover();

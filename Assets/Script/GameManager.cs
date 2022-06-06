@@ -21,12 +21,12 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void Kill()
+    public void Kill()//“GŒ‚”j
     {
         killCount++;
-        killText.text = kCText + " : " + killCount.ToString("D4");
+        killText.text = kCText + " : " + killCount.ToString("D4");//Œ»İ‚ÌŒ‚”j”‚ğ•\¦
     }
-    public void Gameover()
+    public void Gameover()//ƒvƒŒƒCƒ„[‚Ì€–S
     {
         Debug.Log(" GAME OVER ");
     }
