@@ -10,12 +10,13 @@ public class GameManager : MonoBehaviour
     TextMeshProUGUI killText;
     TextMeshProUGUI timerText;
     [SerializeField] string kCText = "KILL";
-    float timer = 0;
+    public static float timer = 0;
     public bool alive = true;
     [SerializeField]GameObject gameOver;
     // Start is called before the first frame update
     void Start()
     {
+        timer = 0;
         killText = GameObject.Find("Kill Count Text").GetComponent<TextMeshProUGUI>();
         killText.text = kCText + " : " + killCount.ToString("D4");
         timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         if(alive)
         {
-            timer = Time.time;
+            timer += Time.deltaTime;
             timerText.text = Mathf.Floor(timer / 60).ToString("00") +":"+ Mathf.Floor(timer % 60).ToString("00");
         }
     }
