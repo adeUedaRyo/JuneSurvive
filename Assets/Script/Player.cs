@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     public void Death()//死亡時用アニメーションから呼ばれる
     {
         Instantiate(explosion,this.transform.position,this.transform.rotation);
-        gm.Gameover();
+        gm.GameOver();
         Destroy(gameObject);
     }
 }

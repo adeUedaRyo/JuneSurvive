@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     int killCount = 0;
@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] string kCText = "KILL";
     float timer = 0;
     public bool alive = true;
+    [SerializeField]GameObject gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +36,13 @@ public class GameManager : MonoBehaviour
         killCount++;
         killText.text = kCText + ":" + killCount.ToString("D4");//現在の撃破数を表示
     }
-    public void Gameover()//プレイヤーの死亡時
+    public void GameOver()//プレイヤーの死亡時
     {
         Debug.Log(" GAME OVER ");
+        gameOver.SetActive(true);
+    }
+    public void GameOverSceneChange()
+    {
+        SceneManager.LoadScene("Result");
     }
 }
