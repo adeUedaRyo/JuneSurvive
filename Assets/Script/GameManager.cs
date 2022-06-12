@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     float _exp = 0;
     int level = 1;
     float nextLevelEXP = 5.0f;
+    LevelUpSkill _levelUpSkill;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
         _timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
         _timerText.text = (timer / 60).ToString("00")+":" +(timer% 60).ToString("00") ;
         _expSlider.value = _exp;
+        _levelUpSkill = GameObject.FindObjectOfType<LevelUpSkill>(); 
     }
 
     // Update is called once per frame
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
         {
             level++;
             _exp = 0;
+            _levelUpSkill.Select();
         }
         _expSlider.value = _exp / nextLevelEXP;
     }
