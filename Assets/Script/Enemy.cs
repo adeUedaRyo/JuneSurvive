@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     GameObject player;
     [SerializeField] int hP = 5;
     [SerializeField] float dps = 10;//ïbä‘É_ÉÅÅ[ÉW
+    [SerializeField] GameObject eXP; 
     // Start is called before the first frame update
     void Awake()
     {
@@ -36,6 +37,7 @@ public class Enemy : MonoBehaviour
             if (hP <= 0)
             {
                 gm.Kill();
+                Instantiate( eXP,this.transform.position,this.transform.rotation);
                 Destroy(gameObject);
             }
         }

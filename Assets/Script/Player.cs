@@ -1,5 +1,8 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] Transform hPUI;
     [SerializeField] GameObject explosion;
     Animator anim;
-
+    List<ISkill> _skill = new List<ISkill>();
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -63,4 +66,28 @@ public class Player : MonoBehaviour
         gm.GameOver();
         Destroy(gameObject);
     }
+    //public void AddSkill(int skillId)
+    //{
+    //    var having = _skill.Where(s => s.SkillId == (SkillDef)skillId);
+    //    if (having.Count() > 0)
+    //    {
+    //        having.Single().Levelup();
+    //    }
+    //    else
+    //    {
+    //        ISkill newSkill = null;
+    //        switch ((SkillDef)skillId)
+    //        {
+    //            case SkillDef.Shot:
+    //                newSkill = new Shot();
+    //                break;
+    //        }
+
+    //        if (newSkill != null)
+    //        {
+    //            newSkill.Setup();
+    //            _skill.Add(newSkill);
+    //        }
+    //    }
+    //}
 }
