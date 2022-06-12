@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         if(_exp >= nextLevelEXP)
         {
             level++;
-            _exp = 0;
+            _exp -= nextLevelEXP;
             _levelUpSkill.Select();
         }
         _expSlider.value = _exp / nextLevelEXP;
