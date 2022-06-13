@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 628486606178350996}
   m_LocalRotation: {x: -0, y: -0, z: -0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 0.43301287, y: -0.25000018, z: 0}
-  m_LocalScale: {x: 0.08960004, y: 0.08960004, z: 0.0896}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606755304379}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -1153394688, guid: 2f0b40d6b49508f4092c201b43d67714, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.78431374, a: 1}
+  m_Color: {r: 0, g: 0.78431374, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 628486606259577047}
   - component: {fileID: 628486606259577044}
   - component: {fileID: 628486606259577045}
+  - component: {fileID: 1764112184}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -160,7 +161,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1060994810, guid: 2f0b40d6b49508f4092c201b43d67714, type: 3}
-  m_Color: {r: 1, g: 0.29411766, b: 0, a: 0.6666667}
+  m_Color: {r: 0, g: 1, b: 0.29411766, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -196,6 +197,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.316853, y: 1.17}
   m_EdgeRadius: 0
+--- !u!114 &1764112184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628486606259577046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b31b6f0cdccf0b44a57cdc5cc1a6f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 3
 --- !u!1 &628486606302208511
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 628486606302208511}
   m_LocalRotation: {x: -0, y: -0, z: 0.9659259, w: -0.25881904}
   m_LocalPosition: {x: -0.43301278, y: -0.25000006, z: 0}
-  m_LocalScale: {x: 0.08960001, y: 0.08960001, z: 0.0896}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606358987156}
@@ -271,7 +285,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -1153394688, guid: 2f0b40d6b49508f4092c201b43d67714, type: 3}
-  m_Color: {r: 0.78431374, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.78431374, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -292,6 +306,7 @@ GameObject:
   - component: {fileID: 628486606358987156}
   - component: {fileID: 628486606358987157}
   - component: {fileID: 628486606358987162}
+  - component: {fileID: 1862866553}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -356,7 +371,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1060994810, guid: 2f0b40d6b49508f4092c201b43d67714, type: 3}
-  m_Color: {r: 1, g: 0.29411766, b: 0, a: 0.6666667}
+  m_Color: {r: 0, g: 1, b: 0.29411766, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -392,6 +407,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.316853, y: 1.17}
   m_EdgeRadius: 0
+--- !u!114 &1862866553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628486606358987159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b31b6f0cdccf0b44a57cdc5cc1a6f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 3
 --- !u!1 &628486606390243476
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +446,7 @@ Transform:
   m_GameObject: {fileID: 628486606390243476}
   m_LocalRotation: {x: -0, y: -0, z: 0.25881904, w: 0.9659259}
   m_LocalPosition: {x: 0.4330129, y: 0.25000012, z: 0}
-  m_LocalScale: {x: 0.08960004, y: 0.08960004, z: 0.0896}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606259577047}
@@ -467,7 +495,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -1153394688, guid: 2f0b40d6b49508f4092c201b43d67714, type: 3}
-  m_Color: {r: 0.78431374, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.78431374, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -488,6 +516,7 @@ GameObject:
   - component: {fileID: 628486606755304379}
   - component: {fileID: 628486606755304376}
   - component: {fileID: 628486606755304377}
+  - component: {fileID: 1420477532}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -552,7 +581,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1060994810, guid: 2f0b40d6b49508f4092c201b43d67714, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 0.6666667}
+  m_Color: {r: 0, g: 1, b: 0.29411766, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -588,6 +617,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.316853, y: 1.17}
   m_EdgeRadius: 0
+--- !u!114 &1420477532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628486606755304378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b31b6f0cdccf0b44a57cdc5cc1a6f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 3
 --- !u!1 &628486606799907202
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +641,7 @@ GameObject:
   - component: {fileID: 628486606799907203}
   - component: {fileID: 628486606799907200}
   - component: {fileID: 628486606799907201}
+  - component: {fileID: 1232174692}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -699,6 +742,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.316853, y: 1.17}
   m_EdgeRadius: 0
+--- !u!114 &1232174692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628486606799907202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b31b6f0cdccf0b44a57cdc5cc1a6f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 3
 --- !u!1 &628486606814101575
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +781,7 @@ Transform:
   m_GameObject: {fileID: 628486606814101575}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.0896, y: 0.0896, z: 0.0896}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486607669947580}
@@ -795,6 +851,7 @@ GameObject:
   - component: {fileID: 628486606950295003}
   - component: {fileID: 628486606950295000}
   - component: {fileID: 628486606950295001}
+  - component: {fileID: 1078702652}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -859,7 +916,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1060994810, guid: 2f0b40d6b49508f4092c201b43d67714, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 0.6666667}
+  m_Color: {r: 0, g: 1, b: 0.29411766, a: 0.6666667}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -895,6 +952,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.316853, y: 1.17}
   m_EdgeRadius: 0
+--- !u!114 &1078702652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628486606950295002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b31b6f0cdccf0b44a57cdc5cc1a6f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 3
 --- !u!1 &628486607035724527
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +991,7 @@ Transform:
   m_GameObject: {fileID: 628486607035724527}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.5000001, z: 0}
-  m_LocalScale: {x: 0.08960001, y: 0.08960001, z: 0.0896}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606799907203}
@@ -1004,7 +1074,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628486607253747242}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1031,12 +1101,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1
-  bit1: {fileID: 628486606814101575}
-  bit2: {fileID: 628486607035724527}
-  bit3: {fileID: 628486606390243476}
-  bit4: {fileID: 628486606302208511}
-  bit5: {fileID: 628486606178350996}
-  bit6: {fileID: 628486607406789479}
+  bit:
+  - {fileID: 628486606814101575}
+  - {fileID: 628486607035724527}
+  - {fileID: 628486606390243476}
+  - {fileID: 628486606302208511}
+  - {fileID: 628486606178350996}
+  - {fileID: 628486607406789479}
+  coolTime: 3
+  activeTime: 5
+  weaponLevel: 1
 --- !u!1 &628486607406789479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,7 +1137,7 @@ Transform:
   m_GameObject: {fileID: 628486607406789479}
   m_LocalRotation: {x: -0, y: -0, z: 0.9659258, w: 0.2588191}
   m_LocalPosition: {x: -0.43301275, y: 0.25000012, z: 0}
-  m_LocalScale: {x: 0.08960003, y: 0.08960003, z: 0.0896}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606950295003}
@@ -1112,7 +1186,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -1153394688, guid: 2f0b40d6b49508f4092c201b43d67714, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.78431374, a: 1}
+  m_Color: {r: 0, g: 0.78431374, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1246,4 +1320,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b31b6f0cdccf0b44a57cdc5cc1a6f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 5
+  power: 3

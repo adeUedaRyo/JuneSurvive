@@ -8,19 +8,27 @@ public class SwordBit : MonoBehaviour
     [SerializeField] GameObject[] bit;
     [SerializeField] float coolTime = 3;
     [SerializeField] float activeTime =5;
+    [SerializeField]int weaponLevel = 1;
     float time = 0;
     bool active = true;
+    GameObject player = null;
+    int activeBit = 2;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player");
     }
-
     // Update is called once per frame
     void Update()
     {
+        if (player != null)//プレイヤーを追跡
+        {
+            this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
+        }
         time += Time.deltaTime;
         transform.Rotate(new Vector3(0, 0, _speed * -360 * Time.deltaTime));
+        
         if(time> coolTime && active == false)
         {
             active = true;
@@ -31,15 +39,36 @@ public class SwordBit : MonoBehaviour
             active = false;
             time = 0;
         }
-        if(active == true)
+
+        if(active == true)//オンオフ切り替え
         {
-            bit[0].SetActive(true);
-            bit[1].SetActive(true);
+            if(weaponLevel >=6)
+            {
+                activeBit = 6;
+            }
+            else if(weaponLevel>=4)
+            {
+                activeBit = 4;
+            }
+            else
+            {
+                activeBit = 2;
+            }
+            for (int i = 0; i < activeBit; i++)
+            {
+                bit[i].SetActive(true);
+            }
         }
         else
         {
-            bit[0].SetActive(false);
-            bit[1].SetActive(false);
+            for(int i = 0; i<bit.Length;i++)
+            {
+                bit[i].SetActive(false);
+            }
         }
+    }
+    public void WeaponLevelUp()
+    {
+        weaponLevel++;
     }
 }
