@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IObjectPool
@@ -49,6 +48,7 @@ public class Enemy : MonoBehaviour, IObjectPool
                 gm.Kill();
                 Instantiate(eXP, this.transform.position, this.transform.rotation);
                 Destroy();
+                hP += 5;
             }
         }
 

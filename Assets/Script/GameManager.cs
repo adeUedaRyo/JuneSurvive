@@ -4,8 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Linq;
 public class GameManager : MonoBehaviour
 {
+    static private GameManager _instance = new GameManager();
+    static public GameManager Instance => _instance;
+    private GameManager() { }
+
     int _killCount = 0;
     TextMeshProUGUI _killText;
     TextMeshProUGUI _timerText;
@@ -18,6 +23,7 @@ public class GameManager : MonoBehaviour
     int level = 1;
     float nextLevelEXP = 5.0f;
     LevelUpSkill _levelUpSkill;
+    List<Enemy> _enemies = new List<Enemy>();
     // Start is called before the first frame update
     void Start()
     {
@@ -64,5 +70,10 @@ public class GameManager : MonoBehaviour
         }
         _expSlider.value = _exp / nextLevelEXP;
     }
-    
+    public void Setup()
+    {
+        //ObjectPool‚ÉˆË‘¶‚µ‚Ä‚¢‚é
+        _enemies = GameObject.FindObjectsOfType<Enemy>(true).ToList();
+    }
+    static public List<Enemy> EnemyList => _instance._enemies;
 }
