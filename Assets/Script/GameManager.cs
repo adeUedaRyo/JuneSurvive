@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
     float nextLevelEXP = 5.0f;
     LevelUpSkill _levelUpSkill;
     List<Enemy> _enemies = new List<Enemy>();
-    [SerializeField] GameObject swordBitPrefab =null; 
+    [SerializeField] GameObject swordBitPrefab =null;
+    GameObject player= null;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,8 @@ public class GameManager : MonoBehaviour
         _timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
         _timerText.text = (timer / 60).ToString("00")+":" +(timer% 60).ToString("00") ;
         _expSlider.value = _exp;
-        _levelUpSkill = GameObject.FindObjectOfType<LevelUpSkill>(); 
+        _levelUpSkill = GameObject.FindObjectOfType<LevelUpSkill>();
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -90,5 +92,9 @@ public class GameManager : MonoBehaviour
         {
             swordBit.GetComponent<SwordBit>().WeaponLevelUp();
         }
+    }
+    public void LevelUpRegenerate()
+    {
+        player.GetComponent<Player>().RegenerateUp();
     }
 }

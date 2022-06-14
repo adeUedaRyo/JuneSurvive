@@ -13,13 +13,14 @@ public class Player : MonoBehaviour
     float h = 0;
     float v = 0;
     [SerializeField]float hP = 100;//現在HP
-    float maxHp = 0;//最大HP
+    float maxHp = 100;//最大HP
     Rigidbody2D rb;
     [SerializeField] Slider slider;
     [SerializeField] Transform hPUI;
     [SerializeField] GameObject explosion;
     Animator anim;
     List<ISkill> _skill = new List<ISkill>();
+    float regenerate = 0;
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -48,7 +49,8 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
             hPUI.localScale = new Vector2(-1, 1);//HPバーが反転するのを防ぐ
         }
-
+        if(hP <=maxHp) hP += regenerate * Time.deltaTime;
+        if(hP <=maxHp)
         slider.value = hP / maxHp;//スライダーの値を現在HPの割合に変更
     }
     public void Damage(float damage)//ダメージを受けたとき
@@ -65,5 +67,9 @@ public class Player : MonoBehaviour
         Instantiate(explosion,this.transform.position,this.transform.rotation);
         gm.GameOver();
         Destroy(gameObject);
+    }
+    public void Regenerate()
+    {
+        regenerate += 0.1f;
     }
 }

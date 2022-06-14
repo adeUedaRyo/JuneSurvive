@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &628486606178350997
 Transform:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &628486606302208508
 Transform:
   m_ObjectHideFlags: 0
@@ -436,7 +436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &628486606390243477
 Transform:
   m_ObjectHideFlags: 0
@@ -1108,8 +1108,15 @@ MonoBehaviour:
   - {fileID: 628486606302208511}
   - {fileID: 628486606178350996}
   - {fileID: 628486607406789479}
-  coolTime: 3
-  activeTime: 5
+  brade:
+  - {fileID: 628486607669947583}
+  - {fileID: 628486606799907202}
+  - {fileID: 628486606259577046}
+  - {fileID: 628486606358987159}
+  - {fileID: 628486606755304378}
+  - {fileID: 628486606950295002}
+  coolTime: 5
+  activeTime: 3
   weaponLevel: 1
 --- !u!1 &628486607406789479
 GameObject:
@@ -1127,7 +1134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &628486607406789476
 Transform:
   m_ObjectHideFlags: 0

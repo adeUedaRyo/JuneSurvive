@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Blade : MonoBehaviour
 {
-    [SerializeField] int power = 5;//ダメージ
+    [SerializeField] int power = 3;//ダメージ
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +22,9 @@ public class Blade : MonoBehaviour
         {
             collision.GetComponent<Enemy>().Damage(power);
         }
+    }
+    public void PowerUp(int p)
+    {
+        power = p;
     }
 }
