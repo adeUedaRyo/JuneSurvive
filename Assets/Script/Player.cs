@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         gm.GameOver();
         Destroy(gameObject);
     }
-    public void Regenerate()
+    public void RegenerateUp()
     {
         regenerate += 0.1f;
     }
