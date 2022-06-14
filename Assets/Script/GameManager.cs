@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     List<Enemy> _enemies = new List<Enemy>();
     [SerializeField] GameObject swordBitPrefab =null;
     GameObject player= null;
+    float attractZone = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -100,5 +101,10 @@ public class GameManager : MonoBehaviour
     public void LevelUpMaxHP()
     {
         player.GetComponent<Player>().MaxHPUP(20);
+    }
+    public void LevelUpAttract()
+    {
+        attractZone += 0.8f;
+        GameObject.Find("AttractZone").transform.localScale = new Vector2(attractZone,attractZone); 
     }
 }

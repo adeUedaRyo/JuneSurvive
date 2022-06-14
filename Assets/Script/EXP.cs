@@ -15,4 +15,12 @@ public class EXP : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag== "Attractzone")
+        {
+            Vector3 vec = collision.transform.position - transform.position;
+            transform.position += vec * 5 * Time.deltaTime;
+        }
+    }
 }
