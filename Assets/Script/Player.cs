@@ -49,8 +49,8 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
             hPUI.localScale = new Vector2(-1, 1);//HPバーが反転するのを防ぐ
         }
-        if(hP <=maxHp) hP += regenerate * Time.deltaTime;
-        if(hP <=maxHp)
+        if(hP <maxHp) hP += regenerate * Time.deltaTime;
+        if (hP > maxHp) hP = maxHp;
         slider.value = hP / maxHp;//スライダーの値を現在HPの割合に変更
     }
     public void Damage(float damage)//ダメージを受けたとき
@@ -71,5 +71,10 @@ public class Player : MonoBehaviour
     public void RegenerateUp()
     {
         regenerate += 0.1f;
+    }
+    public void MaxHPUP(int x)
+    {
+        maxHp += x;
+        hP += x;
     }
 }

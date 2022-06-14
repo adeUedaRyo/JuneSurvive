@@ -12,13 +12,13 @@ public class Enemy : MonoBehaviour, IObjectPool
     [SerializeField] GameObject eXP;
     // Start is called before the first frame update
     SpriteRenderer _sprite;
-    CircleCollider2D _collider;
+    CapsuleCollider2D _collider;
     void Awake()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.Find("Player");
         _sprite = GetComponent<SpriteRenderer>();
-        _collider = GetComponent<CircleCollider2D>();
+        _collider = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -34,11 +34,11 @@ public class Enemy : MonoBehaviour, IObjectPool
             vec.Normalize();
             if (vec.x < 0)
             {
-                transform.localScale = new Vector2(1, 1);
+                transform.localScale = new Vector2(2.5f, 2.5f);
             }
             else
             {
-                transform.localScale = new Vector2(-1, 1);
+                transform.localScale = new Vector2(-2.5f, 2.5f);
             }
             transform.position += vec * _speed * Time.deltaTime;
 

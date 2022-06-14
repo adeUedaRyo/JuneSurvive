@@ -97,4 +97,8 @@ public class GameManager : MonoBehaviour
     {
         player.GetComponent<Player>().RegenerateUp();
     }
+    public void LevelUpMaxHP()
+    {
+        player.GetComponent<Player>().MaxHPUP(20);
+    }
 }
