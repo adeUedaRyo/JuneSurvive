@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628486606178350996}
   m_LocalRotation: {x: -0, y: -0, z: -0.2588191, w: 0.9659258}
-  m_LocalPosition: {x: 0.43301287, y: -0.25000018, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
+  m_LocalPosition: {x: 0.8660258, y: -0.5, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606755304379}
@@ -235,8 +235,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628486606302208511}
   m_LocalRotation: {x: -0, y: -0, z: 0.9659259, w: -0.25881904}
-  m_LocalPosition: {x: -0.43301278, y: -0.25000006, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
+  m_LocalPosition: {x: -0.8660254, y: -0.5, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606358987156}
@@ -445,8 +445,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628486606390243476}
   m_LocalRotation: {x: -0, y: -0, z: 0.25881904, w: 0.9659259}
-  m_LocalPosition: {x: 0.4330129, y: 0.25000012, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
+  m_LocalPosition: {x: 0.8660254, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606259577047}
@@ -780,8 +780,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628486606814101575}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486607669947580}
@@ -990,8 +990,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628486607035724527}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.5000001, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606799907203}
@@ -1062,7 +1062,7 @@ GameObject:
   - component: {fileID: 628486607253747240}
   m_Layer: 0
   m_Name: Sword Bit
-  m_TagString: Untagged
+  m_TagString: Swordbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1136,8 +1136,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628486607406789479}
   m_LocalRotation: {x: -0, y: -0, z: 0.9659258, w: 0.2588191}
-  m_LocalPosition: {x: -0.43301275, y: 0.25000012, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.0896}
+  m_LocalPosition: {x: -0.8660256, y: 0.5000001, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.0896}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 628486606950295003}

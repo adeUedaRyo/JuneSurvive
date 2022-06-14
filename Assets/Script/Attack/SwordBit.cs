@@ -22,10 +22,10 @@ public class SwordBit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null)//ÉvÉåÉCÉÑÅ[Çí«ê’
-        {
-            this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
-        }
+        if (player == null) return;
+        
+        this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
+        
         time += Time.deltaTime;
         transform.Rotate(new Vector3(0, 0, _speed * -360 * Time.deltaTime));
         

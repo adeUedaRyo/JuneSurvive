@@ -7,6 +7,7 @@ TagManager:
   - Camera
   - Bullet
   - Enemy
+  - Swordbit
   layers:
   - Default
   - TransparentFX

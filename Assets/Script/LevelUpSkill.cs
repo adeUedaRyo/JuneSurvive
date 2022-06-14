@@ -25,4 +25,9 @@ public class LevelUpSkill : MonoBehaviour
         skillButton[1].transform.position = center.position;
         skillButton[2].transform.position = right.position;
     }
+    public void SelectEnd()
+    {
+        Time.timeScale = 1;
+        _canvas.alpha = 0;
+    }
 }

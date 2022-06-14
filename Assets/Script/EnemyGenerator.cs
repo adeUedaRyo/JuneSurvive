@@ -30,6 +30,7 @@ public class EnemyGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null) return;
         _timer += Time.deltaTime;
         if (_timer > _time)
         {
@@ -39,14 +40,16 @@ public class EnemyGenerator : MonoBehaviour
         void Spawn()
         {
             var script = _enemyPool.Instantiate();
-            /*
-            var go = GameObject.Instantiate(_prefab);
-            var script = go.GetComponent<Enemy>();
-            */
-            _popPos.x = player.transform.position.x + 5 * Mathf.Cos(_cRad);
-            _popPos.y = player.transform.position.y + 5 * Mathf.Sin(_cRad);
+            int x = Random.Range(0,2);
+            float y = Random.Range(-3,3);
+            if(x == 0)
+            {
+                x -= 1;
+            }
+            _popPos.x = player.transform.position.x + 6 * x;
+            _popPos.y = player.transform.position.y + y;
             script.transform.position = _popPos;
-            _cRad += 0.1f;
+            
         }
     }
 }

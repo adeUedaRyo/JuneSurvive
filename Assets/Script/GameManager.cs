@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     float nextLevelEXP = 5.0f;
     LevelUpSkill _levelUpSkill;
     List<Enemy> _enemies = new List<Enemy>();
+    [SerializeField] GameObject swordBitPrefab =null; 
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
             level++;
             _exp -= nextLevelEXP;
             _levelUpSkill.Select();
+            Time.timeScale = 0;
         }
         _expSlider.value = _exp / nextLevelEXP;
     }
@@ -76,4 +78,17 @@ public class GameManager : MonoBehaviour
         _enemies = GameObject.FindObjectsOfType<Enemy>(true).ToList();
     }
     static public List<Enemy> EnemyList => _instance._enemies;
+
+    public void LevelUpSwordBit()
+    {
+        GameObject swordBit = GameObject.FindGameObjectWithTag("Swordbit");
+        if (swordBit == null)
+        {
+            Instantiate(swordBitPrefab);
+        }
+        else
+        {
+            swordBit.GetComponent<SwordBit>().WeaponLevelUp();
+        }
+    }
 }
