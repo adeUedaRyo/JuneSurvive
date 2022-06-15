@@ -79,6 +79,7 @@ public class Enemy : MonoBehaviour, IObjectPool
         _collider.enabled = true;
         _sprite.enabled = true;
         _isActive = true;
+        gm._enemyCount++;
     }
 
     public void Destroy()
@@ -86,5 +87,6 @@ public class Enemy : MonoBehaviour, IObjectPool
         _collider.enabled = false;
         _sprite.enabled = false;
         _isActive = false;
+        gm._enemyCount--;
     }
 }

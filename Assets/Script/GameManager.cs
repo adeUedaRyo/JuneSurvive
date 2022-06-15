@@ -12,30 +12,35 @@ public class GameManager : MonoBehaviour
     private GameManager() { }
 
     int _killCount = 0;
-    TextMeshProUGUI _killText;
-    TextMeshProUGUI _timerText;
-    [SerializeField] string _kCText = "KILL";
+    TextMeshProUGUI _killText = null;
+    TextMeshProUGUI _timerText = null;
+    TextMeshProUGUI _enemyCountText = null;
+    TextMeshProUGUI _levelText = null;
+    [SerializeField] string _kCText = null;
     public static float timer = 0;
     public bool alive = true;
     [SerializeField]GameObject _gameOver;
     [SerializeField] Slider _expSlider;
     float _exp = 0;
     int level = 1;
-    float nextLevelEXP = 5.0f;
+    float nextLevelEXP = 5;
     LevelUpSkill _levelUpSkill;
     List<Enemy> _enemies = new List<Enemy>();
     [SerializeField] GameObject swordBitPrefab =null;
     [SerializeField] GameObject boomerangLauncherPrefab = null;
     GameObject player= null;
     float attractZone = 1;
+    public int _enemyCount = 0;
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
         _killText = GameObject.Find("Kill Count Text").GetComponent<TextMeshProUGUI>();
-        _killText.text = _kCText + " : " + _killCount.ToString("D4");
+        _killText.text = _kCText + ":" + _killCount.ToString("D4");
         _timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
-        _timerText.text = (timer / 60).ToString("00")+":" +(timer% 60).ToString("00") ;
+        _timerText.text = (timer / 60).ToString("00")+":" +(timer% 60).ToString("00");
+        _enemyCountText = GameObject.Find("EnemyCount Text").GetComponent<TextMeshProUGUI>();
+        _levelText = GameObject.Find("LevelText").GetComponent<TextMeshProUGUI>();
         _expSlider.value = _exp;
         _levelUpSkill = GameObject.FindObjectOfType<LevelUpSkill>();
         player = GameObject.Find("Player");
@@ -49,11 +54,13 @@ public class GameManager : MonoBehaviour
             timer += Time.deltaTime;
             _timerText.text = Mathf.Floor(timer / 60).ToString("00") +":"+ Mathf.Floor(timer % 60).ToString("00");
         }
+        _levelText.text = "Level " + level.ToString();
+        _enemyCountText.text = "ìGåüímêî:"+_enemyCount.ToString("D4");
     }
     public void Kill()//ìGåÇîjéû
     {
         _killCount++;
-        _killText.text = _kCText + " : " + _killCount.ToString("D4");//åªç›ÇÃåÇîjêîÇï\é¶
+        _killText.text = _kCText + ":" + _killCount.ToString("D4");//åªç›ÇÃåÇîjêîÇï\é¶
     }
     public void GameOver()//ÉvÉåÉCÉÑÅ[ÇÃéÄñSéû
     {

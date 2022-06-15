@@ -22,8 +22,6 @@ public class EnemyGenerator : MonoBehaviour
         _enemyPool.SetCapacity(1000);
 
         GameManager.Instance.Setup();
-
-        //for (int i = 0; i < 900; ++i) Spawn();
     }
 
     // Update is called once per frame
