@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     [SerializeField] Transform hPUI;
     [SerializeField] GameObject explosion;
     Animator anim;
-    List<ISkill> _skill = new List<ISkill>();
     float regenerate = 0;
     void Start()
     {

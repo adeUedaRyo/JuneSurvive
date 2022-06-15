@@ -94,6 +94,11 @@ public class GameManager : MonoBehaviour
             swordBit.GetComponent<SwordBit>().WeaponLevelUp();
         }
     }
+    public void LevelUpRifle()
+    {
+        GameObject rifle = GameObject.Find("Rifle");
+        rifle.GetComponent<Shot>().WeaponLevelUp();
+    }
     public void LevelUpRegenerate()
     {
         player.GetComponent<Player>().RegenerateUp();

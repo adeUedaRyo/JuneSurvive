@@ -10,7 +10,6 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] Transform _root = null;
     Transform player = null;
     float _timer = 0.0f;
-    float _cRad = 0.0f;
     Vector3 _popPos = new Vector3(0, 0, 0);
 
     ObjectPool<Enemy> _enemyPool = new ObjectPool<Enemy>();
