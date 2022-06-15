@@ -20,7 +20,7 @@ public class EXP : MonoBehaviour
         if(collision.gameObject.tag== "Attractzone")
         {
             Vector3 vec = collision.transform.position - transform.position;
-            transform.position += vec * 5 * Time.deltaTime;
+            transform.position += vec * 10 * Time.deltaTime;
         }
     }
 }

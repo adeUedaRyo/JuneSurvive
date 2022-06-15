@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Swordbit
   - Attractzone
+  - BoomerangLauncher
   layers:
   - Default
   - TransparentFX

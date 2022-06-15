@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     LevelUpSkill _levelUpSkill;
     List<Enemy> _enemies = new List<Enemy>();
     [SerializeField] GameObject swordBitPrefab =null;
+    [SerializeField] GameObject boomerangLauncherPrefab = null;
     GameObject player= null;
     float attractZone = 1;
     // Start is called before the first frame update
@@ -92,6 +93,18 @@ public class GameManager : MonoBehaviour
         else
         {
             swordBit.GetComponent<SwordBit>().WeaponLevelUp();
+        }
+    }
+    public void LevelUpBoomerang()
+    {
+        GameObject boomerangL = GameObject.FindGameObjectWithTag("BoomerangLauncher");
+        if(boomerangL==null)
+        {
+            Instantiate(boomerangLauncherPrefab);
+        }
+        else
+        {
+            boomerangL.GetComponent<BoomerangLauncher>().WeaponLevelUp();
         }
     }
     public void LevelUpRifle()

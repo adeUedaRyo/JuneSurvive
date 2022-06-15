@@ -94,17 +94,5 @@ public class Shot : MonoBehaviour
                 activeMuzzel = 2;
                 break;
         }
-
-        //for (int i = 0; i < bit.Length; i++)
-        //{
-        //    bit[i].GetComponent<Transform>().localScale = new Vector2(bit[i].transform.localScale.x * _size, bit[i].transform.localScale.y * _size);
-        //}
-        //_size = 1;//レベルアップのたびに巨大化するのを防ぐ
-
-        //for (int i = 0; i < brade.Length; i++)
-        //{
-        //    brade[i].GetComponent<Blade>().PowerUp(_power);
-        //}
     }
-
 }
