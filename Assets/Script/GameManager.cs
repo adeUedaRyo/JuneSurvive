@@ -143,4 +143,9 @@ public class GameManager : MonoBehaviour
         attraLev++;
         if (mhpLev >= 5) _levelUpSkill.LevelMax("AttractZoneButton");
     }
+
+    public void Chicken()
+    {
+        player.GetComponent<Player>().HPUP(30);
+    }
 }

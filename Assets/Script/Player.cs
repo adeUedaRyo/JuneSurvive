@@ -76,4 +76,8 @@ public class Player : MonoBehaviour
         maxHp += x;
         hP += x;
     }
+    public void HPUP(int x)
+    {
+        hP += x;
+    }
 }

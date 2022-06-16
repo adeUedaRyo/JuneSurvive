@@ -8,6 +8,7 @@ public class LevelUpSkill : MonoBehaviour
     CanvasGroup _canvas;
     [SerializeField] List<GameObject> skillButton;
     [SerializeField] Transform left, center, right;
+    [SerializeField] GameObject chickenButton;
     private void Awake()
     {
         _canvas = GetComponent<CanvasGroup>();
@@ -20,6 +21,12 @@ public class LevelUpSkill : MonoBehaviour
     public void Select()
     {
         _canvas.alpha = 1;
+        if(skillButton.Count <=0)
+        {
+            chickenButton.transform.position = center.position;
+            chickenButton.SetActive(true);
+            return;
+        }
         skillButton = skillButton.OrderBy(a =>Guid.NewGuid()).ToList();
         skillButton[0].transform.position = left.position;
         skillButton[0].SetActive(true);
@@ -36,7 +43,7 @@ public class LevelUpSkill : MonoBehaviour
         {
             skillButton[i].SetActive(false);
         }
-
+        chickenButton.SetActive(false);
     }
     public void LevelMax(string name)
     {
