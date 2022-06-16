@@ -30,8 +30,10 @@ public class LevelUpSkill : MonoBehaviour
         skillButton = skillButton.OrderBy(a =>Guid.NewGuid()).ToList();
         skillButton[0].transform.position = left.position;
         skillButton[0].SetActive(true);
+        if (skillButton.Count <=1) return;
         skillButton[1].transform.position = center.position;
         skillButton[1].SetActive(true);
+        if (skillButton.Count <= 2) return;
         skillButton[2].transform.position = right.position;
         skillButton[2].SetActive(true);
     }

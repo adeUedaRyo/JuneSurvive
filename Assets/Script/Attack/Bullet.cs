@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += vec * _speed * Time.deltaTime;
-        if (transform.position.x >= player.transform.position.x + 6 || transform.position.x <= player.transform.position.x - 6 || transform.position.y >= player.transform.position.y+ 4 || transform.position.y <= player.transform.position.y - 4) Destroy(gameObject);
+        if (transform.position.x >= player.transform.position.x + 6 || transform.position.x <= player.transform.position.x - 6 || transform.position.y >= player.transform.position.y+ 4 || transform.position.y <= player.transform.position.y - 4||player==null) Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

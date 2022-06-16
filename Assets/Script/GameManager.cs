@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     List<Enemy> _enemies = new List<Enemy>();
     [SerializeField] GameObject swordBitPrefab =null;
     [SerializeField] GameObject boomerangLauncherPrefab = null;
+    [SerializeField] GameObject missileLauncherPrefab = null;
     GameObject player= null;
     float attractZone = 1;
     public int _enemyCount = 0;
@@ -79,8 +80,8 @@ public class GameManager : MonoBehaviour
         {
             level++;
             _exp -= nextLevelEXP;
-            _levelUpSkill.Select();
             Time.timeScale = 0;
+            _levelUpSkill.Select();
             nextLevelEXP = 2+level/5 + level*(level/5 +3);
         }
         _expSlider.value = _exp / nextLevelEXP;
@@ -122,7 +123,18 @@ public class GameManager : MonoBehaviour
         GameObject rifle = GameObject.Find("Rifle");
         rifle.GetComponent<Shot>().WeaponLevelUp();
     }
-
+    public void LevelUpMissile()
+    {
+        GameObject missileL = GameObject.Find("MissileLauncher");
+        if (missileL == null)
+        {
+            Instantiate(missileLauncherPrefab);
+        }
+        else
+        {
+            missileL.GetComponent<MissileLauncher>().WeaponLevelUp();
+        }
+    }
     //スキルのレベルアップ
     public void LevelUpRegenerate()
     {

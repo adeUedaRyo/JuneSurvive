@@ -11,6 +11,7 @@ TagManager:
   - Attractzone
   - BoomerangLauncher
   - EXP
+  - MissileLauncher
   layers:
   - Default
   - TransparentFX
