@@ -56,6 +56,7 @@ public class BoomerangLauncher : MonoBehaviour
             case >= 7:
                 _rapidFire = 5;
                 _size = 2;
+                GameObject.Find("SkillCanvas").GetComponent<LevelUpSkill>().LevelMax("BoomerangButton");
                 break;
             case >= 6:
                 _rapidFire = 4;

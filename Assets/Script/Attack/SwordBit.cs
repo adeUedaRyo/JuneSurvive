@@ -69,6 +69,7 @@ public class SwordBit : MonoBehaviour
             case >= 7:
                 coolTime = 3;
                 activeTime = 4;
+                GameObject.Find("SkillCanvas").GetComponent<LevelUpSkill>().LevelMax("SwordBitButton");
                 break;
             case >= 6:
                 _activeBit = 6;

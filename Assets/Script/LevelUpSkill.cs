@@ -38,4 +38,16 @@ public class LevelUpSkill : MonoBehaviour
         }
 
     }
+    public void LevelMax(string name)
+    {
+       foreach(GameObject a in skillButton)
+       {
+            if(a.name == name)
+            {
+                a.SetActive(false);
+                skillButton.Remove(a);
+                break;
+            }
+       }
+    }
 }

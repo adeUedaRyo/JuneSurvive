@@ -13,7 +13,8 @@ public class EnemyGenerator : MonoBehaviour
     Vector3 _popPos = new Vector3(0, 0, 0);
     int number = 5;
     [SerializeField]int wave = 1;
-    int hp =5;
+    int _hp = 5;
+    float _speed = 1;
     ObjectPool<Enemy> _enemyPool = new ObjectPool<Enemy>();
 
     GameManager gm = null;
@@ -56,7 +57,8 @@ public class EnemyGenerator : MonoBehaviour
             _popPos.x = player.transform.position.x + x * xR;
             _popPos.y = player.transform.position.y + y;
             script.transform.position = _popPos;
-            script.hP = hp;
+            script.hP = _hp;
+            script.speed = _speed;
             if (gm._enemyCount >= 999) break;
         }
         wave++;
@@ -66,18 +68,23 @@ public class EnemyGenerator : MonoBehaviour
     {
         if(wave >= 60)// 8•ªˆÈ~
         {
-            hp++;
+            _hp++;
+            _speed = 1.75f;
         }
         else if(wave >= 6)// 1•ªŒo‰ß
         {
-            hp = 8;
+            _hp = 8;
             if(wave >= 18)// 3•ªŒo‰ß
             {
                 _time = 7.5f;
-                hp = 10;
+                _hp = 10;
+                _speed = 1.25f;
+
+
                 if(wave >= 36)// 5•ªŒo‰ß
                 {
-                    hp = 15;
+                    _hp = 15;
+                    _speed = 1.5f;
                 }
             }
         }

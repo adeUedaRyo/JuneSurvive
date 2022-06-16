@@ -69,6 +69,7 @@ public class Shot : MonoBehaviour
             case >= 7:
                 rapidFire = 4;
                 coolTime = 0.5f;
+                GameObject.Find("SkillCanvas").GetComponent<LevelUpSkill>().LevelMax("RifleButton");
                 break;
             case >= 6:
                 activeMuzzel = 4;

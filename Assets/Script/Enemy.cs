@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IObjectPool
 {
     GameManager gm;
-    [SerializeField] float _speed = 10;
+    [SerializeField] public float speed = 10;
     GameObject player;
     [SerializeField] public int hP = 5;
     [SerializeField] float dps = 10;//ïbä‘É_ÉÅÅ[ÉW
@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour, IObjectPool
             {
                 transform.localScale = new Vector2(-2.5f, 2.5f);
             }
-            transform.position += vec * _speed * Time.deltaTime;
+            transform.position += vec * speed * Time.deltaTime;
 
             if (hP <= 0)
             {

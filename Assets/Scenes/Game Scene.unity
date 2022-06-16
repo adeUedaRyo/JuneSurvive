@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 272266973}
   - component: {fileID: 272266972}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: RegenerateButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3165,7 +3165,7 @@ GameObject:
   - component: {fileID: 913574256}
   - component: {fileID: 913574255}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: AttractZoneButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3373,7 +3373,7 @@ GameObject:
   - component: {fileID: 1030056434}
   - component: {fileID: 1030056433}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SwordBitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4036,7 +4036,7 @@ GameObject:
   - component: {fileID: 1300272520}
   - component: {fileID: 1300272519}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: RifleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5667,7 +5667,7 @@ GameObject:
   - component: {fileID: 1716777294}
   - component: {fileID: 1716777293}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: BoomerangButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5897,7 +5897,7 @@ GameObject:
   - component: {fileID: 1801993020}
   - component: {fileID: 1801993019}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: MaxHPUpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
