@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour, IObjectPool
     GameManager gm;
     [SerializeField] float _speed = 10;
     GameObject player;
-    [SerializeField] int hP = 5;
+    [SerializeField] public int hP = 5;
     [SerializeField] float dps = 10;//ïbä‘É_ÉÅÅ[ÉW
     [SerializeField] GameObject eXP;
     // Start is called before the first frame update

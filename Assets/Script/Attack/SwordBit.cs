@@ -67,11 +67,12 @@ public class SwordBit : MonoBehaviour
     {
         switch (weaponLevel) {
             case >= 7:
-                _size = 1.3f;
-                _power = 7;
+                coolTime = 3;
+                activeTime = 4;
                 break;
             case >= 6:
                 _activeBit = 6;
+                _size = 1.3f;
                 break;
             case >= 5:
                 _speed = 1.5f;

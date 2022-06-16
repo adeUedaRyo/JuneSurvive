@@ -13,7 +13,7 @@ public class EnemyGenerator : MonoBehaviour
     Vector3 _popPos = new Vector3(0, 0, 0);
     int number = 5;
     [SerializeField]int wave = 1;
-
+    int hp =5;
     ObjectPool<Enemy> _enemyPool = new ObjectPool<Enemy>();
 
     GameManager gm = null;
@@ -48,14 +48,15 @@ public class EnemyGenerator : MonoBehaviour
         for (int i = 0; i < number; i++)
         {
             var script = _enemyPool.Instantiate();
+            
             int xR = 1;
             float x = Random.Range(6.0f, 12.0f);
             float y = Random.Range(-3.0f, 3.0f);
             if (i > number / 2) xR = -1;
-            
             _popPos.x = player.transform.position.x + x * xR;
             _popPos.y = player.transform.position.y + y;
             script.transform.position = _popPos;
+            script.hP = hp;
             if (gm._enemyCount >= 999) break;
         }
         wave++;
@@ -63,12 +64,21 @@ public class EnemyGenerator : MonoBehaviour
     }
     public void EnemyWave()
     {
-        if(wave >= 6)// 1分経過
+        if(wave >= 60)// 8分以降
         {
-            _time = 7.5f;
-            if(wave>= 22)// 3分経過
+            hp++;
+        }
+        else if(wave >= 6)// 1分経過
+        {
+            hp = 8;
+            if(wave >= 18)// 3分経過
             {
-                
+                _time = 7.5f;
+                hp = 10;
+                if(wave >= 36)// 5分経過
+                {
+                    hp = 15;
+                }
             }
         }
     }

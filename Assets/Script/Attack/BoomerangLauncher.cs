@@ -59,7 +59,7 @@ public class BoomerangLauncher : MonoBehaviour
                 break;
             case >= 6:
                 _rapidFire = 4;
-                _bPower = 20;
+                _bPower = 15;
                 break;
             case >= 5:
                 _coolTime = 1f;
@@ -67,7 +67,7 @@ public class BoomerangLauncher : MonoBehaviour
                 break;
             case >= 4:
                 _rapidFire = 3;
-                _bPower = 15;
+                _bPower = 10;
                 break;
             case >= 3:
                 _coolTime = 1.5f;
@@ -75,6 +75,7 @@ public class BoomerangLauncher : MonoBehaviour
                 break;
             case >= 2:
                 _rapidFire = 2;
+                _bPower = 8;
                 break;
         }
     }

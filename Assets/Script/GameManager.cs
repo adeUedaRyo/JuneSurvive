@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
     }
     static public List<Enemy> EnemyList => _instance._enemies;
 
+    //武器のレベルアップ
     public void LevelUpSwordBit()
     {
         GameObject swordBit = GameObject.FindGameObjectWithTag("Swordbit");
@@ -119,6 +120,8 @@ public class GameManager : MonoBehaviour
         GameObject rifle = GameObject.Find("Rifle");
         rifle.GetComponent<Shot>().WeaponLevelUp();
     }
+
+    //スキルのレベルアップ
     public void LevelUpRegenerate()
     {
         player.GetComponent<Player>().RegenerateUp();
