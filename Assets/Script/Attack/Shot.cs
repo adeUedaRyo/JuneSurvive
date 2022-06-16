@@ -78,17 +78,17 @@ public class Shot : MonoBehaviour
                 break;
             case >= 5:
                 rapidFire = 3;
-                coolTime = 1;
+                coolTime = 0.75f;
+                _bPower = 7;
                 break;
             case >= 4:
                 activeMuzzel = 3;
-                _bPower = 7;
                 _bSpeed = 4.5f;
                 _bPenet = 3;
                 break;
             case >= 3:
                 rapidFire = 2;
-                coolTime = 1.5f;
+                coolTime = 1;
                 break;
             case >= 2:
                 activeMuzzel = 2;

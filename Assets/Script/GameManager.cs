@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             _timerText.text = Mathf.Floor(timer / 60).ToString("00") +":"+ Mathf.Floor(timer % 60).ToString("00");
         }
         _levelText.text = "Level " + level.ToString();
-        _enemyCountText.text = "“GŒŸ’m”:"+_enemyCount.ToString("D4");
+        _enemyCountText.text = "“GŒŸ’m”:"+_enemyCount.ToString("D3");
     }
     public void Kill()//“GŒ‚”j
     {
