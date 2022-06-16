@@ -6,7 +6,10 @@ public class BGLoop : MonoBehaviour
 {
 
     [SerializeField] Transform upper, lower, right, left,maxX,minX,maxY,minY;
-    GameObject player;
+    GameObject player =null;
+    GameObject[] enemy = null;
+    GameObject[] exp = null;
+    GameObject[] bullet = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +19,27 @@ public class BGLoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player!= null)
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        exp = GameObject.FindGameObjectsWithTag("EXP");
+        bullet =GameObject.FindGameObjectsWithTag("Bullet");
+        if (player!= null)
         {
             if (player.transform.position.x >= maxX.transform.position.x)//プレイヤーがマップ右端に到達時
             {
                 player.transform.position = new Vector2(left.position.x, player.transform.position.y);//マップ左側の右端にワープ
+                Vector3 move = new Vector3(maxX.position.x - left.position.x,0,0);
+                foreach (GameObject a in enemy)
+                {
+                    a.transform.position -= move;
+                }
+                foreach (GameObject a in exp)
+                {
+                    a.transform.position -= move;
+                }
+                foreach (GameObject a in bullet)
+                {
+                    a.transform.position -= move;
+                }
             }
             if (player.transform.position.x <= minX.transform.position.x)//プレイヤーがマップ左端に到達時
             {

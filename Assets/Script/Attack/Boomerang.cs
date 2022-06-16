@@ -44,6 +44,7 @@ public class Boomerang : MonoBehaviour
         {
             if(time > 2)Destroy(gameObject);
         }
+        if (time > 5) Destroy(gameObject);
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

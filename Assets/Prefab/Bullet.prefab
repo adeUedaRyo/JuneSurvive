@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  power: 5
-  penetration: 1
+  _power: 5
+  _penetration: 1
 --- !u!50 &1802873829178404251
 Rigidbody2D:
   serializedVersion: 4
