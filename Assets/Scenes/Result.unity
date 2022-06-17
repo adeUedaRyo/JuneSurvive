@@ -343,15 +343,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 143a80ccd1f2fb444b1fb62cb0a45b36, type: 2}
-  m_sharedMaterial: {fileID: 7088371705432253947, guid: 143a80ccd1f2fb444b1fb62cb0a45b36, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 68a8ad524876af84d8b0fa9eb083c18d, type: 2}
+  m_sharedMaterial: {fileID: -2063525640493671163, guid: 68a8ad524876af84d8b0fa9eb083c18d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3358916823
-  m_fontColor: {r: 0.84313726, g: 0, b: 0.20784314, a: 0.78431374}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -642,7 +642,7 @@ RectTransform:
   m_GameObject: {fileID: 1427405276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2174513, y: 4.9126673, z: 2.7677}
+  m_LocalScale: {x: 4.4117694, y: 6.736249, z: 3.7950702}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 967557502}
@@ -723,15 +723,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.913816, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: db565b902f5f80845991db01cb84697b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
