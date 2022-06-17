@@ -16,6 +16,9 @@ public class SwordBit : MonoBehaviour
     int _activeBit = 2;
     int _power = 3;
     float _size = 1;
+
+    [SerializeField]bool ultra= false;//デバッグ用
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,12 @@ public class SwordBit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ultra ==true)//最強状態になる
+        {
+            weaponLevel = 7;
+            AttackUp();
+            ultra = false;
+        }
         if (player == null) return;
         
         this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
@@ -67,8 +76,12 @@ public class SwordBit : MonoBehaviour
     {
         switch (weaponLevel) {
             case >= 7:
+                _activeBit = 6;
                 coolTime = 3;
                 activeTime = 4;
+                _size = 1.3f;
+                _power = 5;
+                _speed = 1.25f;
                 GameObject.Find("SkillCanvas").GetComponent<LevelUpSkill>().LevelMax("SwordBitButton");
                 break;
             case >= 6:

@@ -15,6 +15,9 @@ public class BoomerangLauncher : MonoBehaviour
     int _bPower = 10;
 
     float _size = 1;
+
+    [SerializeField] bool ultra = false;//デバッグ用
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,13 @@ public class BoomerangLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ultra == true)//最強状態になる
+        {
+            weaponLevel = 7;
+            AttackUp();
+            ultra = false;
+        }
+
         if (player == null) return;
 
         this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
@@ -56,6 +66,8 @@ public class BoomerangLauncher : MonoBehaviour
             case >= 7:
                 _rapidFire = 5;
                 _size = 2;
+                _bPower = 15;
+                _coolTime = 1f;
                 GameObject.Find("SkillCanvas").GetComponent<LevelUpSkill>().LevelMax("BoomerangButton");
                 break;
             case >= 6:

@@ -18,6 +18,9 @@ public class Shot : MonoBehaviour
     float _bSpeed = 3;
     int _bPower = 5;
     int _bPenet = 1;
+
+    [SerializeField] bool ultra = false;//デバッグ用
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,13 @@ public class Shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ultra == true)//最強状態になる
+        {
+            weaponLevel = 7;
+            AttackUp();
+            ultra = false;
+        }
+
         if (player == null) return;
 
         this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
@@ -69,6 +79,10 @@ public class Shot : MonoBehaviour
             case >= 7:
                 rapidFire = 4;
                 coolTime = 0.5f;
+                activeMuzzel = 4;
+                _bPenet = 5;
+                _bPower = 10;
+                _bSpeed = 6;
                 GameObject.Find("SkillCanvas").GetComponent<LevelUpSkill>().LevelMax("RifleButton");
                 break;
             case >= 6:

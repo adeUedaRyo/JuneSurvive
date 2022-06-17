@@ -14,6 +14,8 @@ public class MissileLauncher : MonoBehaviour
     int _shotCount = 0;//撃った回数
     bool _canShot = false;
 
+    [SerializeField] bool ultra = false;//デバッグ用
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,13 @@ public class MissileLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ultra == true)//最強状態になる
+        {
+            weaponLevel = 7;
+            AttackUp();
+            ultra = false;
+        }
+
         if (player == null) return;
 
         this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);

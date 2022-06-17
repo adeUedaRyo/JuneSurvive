@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
     }
     public void LevelUpMissile()
     {
-        GameObject missileL = GameObject.Find("MissileLauncher");
+        GameObject missileL = GameObject.FindGameObjectWithTag("MissileLauncher");
         if (missileL == null)
         {
             Instantiate(missileLauncherPrefab);
